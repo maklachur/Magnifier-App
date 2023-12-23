@@ -4,6 +4,8 @@
 
 This project is a React-based application that features a magnifier tool for image inspection. It's designed to provide an interactive way to zoom in and examine details within images, with additional functionalities like a dynamic ruler for measuring and a customizable zoom feature.
 
+<img src="assets/app_screenshot.png" width="750" alt="Magnifier App Screenshot">
+
 ## Features
 
 - **Magnifier**: Allows users to magnify parts of an image for detailed inspection.
