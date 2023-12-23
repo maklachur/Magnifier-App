@@ -1,0 +1,63 @@
+/* src/Magnifier.css */
+
+/* Styles for the magnifier container */
+.magnifier {
+  width: 1000px;
+  height: 600px;
+  background-repeat: no-repeat;
+  border: 3px solid rgb(151, 141, 7);
+  margin-top: 10px;
+  position: relative; /* Required for absolute positioning of children */
+  cursor: crosshair; /* Optional: changes the cursor to indicate magnifiable area */
+}
+
+/* Styles for the zoom and exit buttons, and the zoom selector */
+button, .zoom-selector {
+  margin: 5px;
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+/* Styles for the tooltip showing current zoom level */
+.tooltip {
+  position: absolute;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  color: rgb(255, 4, 4);
+  border-radius: 4px;
+  pointer-events: none;
+  font-size: 0.8em;
+  white-space: nowrap;
+}
+
+/* Styles for the ruler overlay */
+.ruler-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 25px; /* Adjust the height of the ruler */
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+/* Styles for the individual scale markers on the ruler */
+.ruler-marker {
+  position: absolute;
+  height: 100%;
+  border-left: 1px solid rgb(3, 255, 116); /* Color and style of the marker lines */
+  font-size: 12px; /* Font size for the scale labels */
+}
+
+/* Position the scale labels */
+.ruler-marker::after {
+  content: attr(data-label);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
